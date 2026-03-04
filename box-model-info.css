@@ -3,7 +3,17 @@ p.box-model {
     color: black;
     padding: 1rem;
     border: 1rem solid #ffa759;
-    margin: 1rem;
+    margin: 0rem;
+
+
+}
+
+p.box-model-2 {
+    background-color: #ffa759;
+    color: black;
+    padding: 1rem;
+    border: 1rem solid #4ecdf4;
+    margin: 0rem;
 
 
 }
@@ -79,6 +89,7 @@ figure {
 figcaption {
     margin-top: .5rem;
     font-size: 0.75rem;
+    font-weight: 115%;
 }
 
 li.equation {
