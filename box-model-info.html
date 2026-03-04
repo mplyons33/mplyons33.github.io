@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Learning About the Box Model</title>
+        <link href="box-model-info.css" rel="stylesheet">
+    </head>
+    <h1>Learning About the Box Model in CSS</h1>
+    <h2 class="belowimg">Background Info</h2>
+        <p>We've learned that the best way to think about CSS is to imagine there's an invisible box around every HTML element we write. By using CSS, we can change both:
+            <ul>
+                <li>The style of the content within the boxes.</li>
+                <li>The style of the boxes themselves.</li>
+            </ul></p>
+        <p>For example, we can create a CSS rule that defines the <span style="font-family:monospace">width:</span> or <span style="font-family:monospace">height:</span> of some element as a unit of size, like pixels (px) or root em (rem).</p>
+        <p>However, when we define the width and height of an element (let's say, for example, an &lt;h2&gt; element), we're actually only defining the width and height of the <strong>content</strong> itself. For example, we can style a regular &lt;h2&gt; element with a CSS rule that declares: 
+            <pre><code>
+h2 {
+    width: 350px;
+    background-color: black;
+    color: white;
+}
+
+            </code></pre>and we'd get something like this.</p>
+        <h2 style="background-color:black; color:white;">hello, world!</h2>
+</p>
+<p>But let's say that I want to add another &lt;h2&gt; with a different background color. So I go and write something like this:</p>
+        <pre><code>
+h2.blue {
+    width: 350px;
+    background-color: blue;
+    color: white;
+}
+
+            </code></pre>and I get something like this:
+        <h2 style="background-color:black; color:white;">hello, world!</h2>
+        <h2 style="background-color: blue; color: white;">hello, blue world!</h2>
+        <p>As you can see, the browser has automatically put some space in between the two elements.</p>
+        <p>But let's say that I don't want the space to be that big. Say I want the two boxes to touch each other with no space in between, and to make the area between the text and the outside of each box a bit bigger.</p>
+        <p>As our webpages get more complex, we'll want to control the appearance and spacing of <em>both</em> our content and the areas around it.</p> 
+        <p>Therefore, we'll have to think about styling not just content, but the entire "box" around that content.</p>
+    <h2 class="belowimg">The Four Boxes of the Box Model</h2>
+    <figure>
+        <img src="box-model-example.png" alt="a visual example of the box model, with boxes labeled padding, border, and margin surrounding a box labeled content.">
+        <figcaption>Each box of content is wrapped in three other boxes that we can position and style.</figcaption>
+    </figure>
+        <p>Imagine, like above, we have an HTML element &lt;h2&gt;. You can think of its text as being located within an invisible <strong>Content</strong> box. As you will see, we can think of &lt;h2&gt; as surrounded by three other boxes, in a specific order:
+            <ul>
+                <li><strong>Padding</strong>: An invisible box between the text of the Content box and the inside of the Border.</li>
+                <li><strong>Border</strong>: A box between the outside of the Padding box and the inside of the Margin box.</li>
+                <ul><li><i><b>Note:</b> You can style the color, style, and size of an element's Border</i>.</li></ul>
+                <li><strong>Margin</strong>: An invisible box between the outside of the Border and the surrounding elements.</li>
+            </ul>
+        <p>Thus, we calculate the total width/height of &lt;h2&gt; by adding up the following:
+            <ul>
+                <li class="equation">Width = <strong>Content</strong> width + <strong>Padding</strong> width + <strong>Border</strong> width + <strong>Margin</strong> width</li>
+                <li class="equation">Height = <strong>Content</strong> height + <strong>Padding</strong> height + <strong>Border</strong> height + <strong>Margin</strong> height</li>
+            </ul>
+        </p>
+        <p>
+            Now, as we begin to style &lt;h2&gt; on our page, we can (and should) take into account not only &lt;h2&gt;, but the entire box model around it.
+        </p>
+    <h2 class="belowimg">Try it out for yourself!</h2>
+        <p>Below, I have created a &lt;p&gt; element that we can use to test the "box model" of CSS. In the corresponding CSS file, try adjusting the size of the <strong>Padding</strong> and <strong>Margin</strong> boxes, as well as the size and style of the <strong>Content</strong> and <strong>Border</strong> boxes.</p>
+        <hr />
+
+    <p class="box-model">Play around with the box model!</p>
+    <p>This paragraph is here as reference text for when you play with the margin.</p>
+
+
+</html>

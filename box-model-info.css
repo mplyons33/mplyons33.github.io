@@ -1,0 +1,99 @@
+p.box-model {
+    background-color: #4ecdf4;
+    color: black;
+    padding: 1rem;
+    border: 1rem solid #ffa759;
+    margin: 1rem;
+
+
+}
+
+
+
+/* You can ignore all the CSS under here. It's for the HTML for the rest of the page. */
+
+
+
+html {
+    background-color: #F7F4ED;
+    color: #10252c;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    background-color: #313f84;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    outline: 0.4rem solid #ffa759;
+    border: 0.2rem solid #4ecdf4;
+    margin: 0.1rem;
+    text-align: center;
+}
+
+h2 {
+    max-width: 350px;
+}
+
+h2.belowimg {
+    background-color: #ffa759;
+    color: #0D1020;
+    max-width: none;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    border: 0.2rem solid #313f84;
+    margin: 0.1rem solid black;
+    clear: both;
+
+}
+
+p {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+
+img {
+height: auto;
+width: auto;
+max-width: 640px;
+max-height: 360px;
+}
+
+figure {
+    height: auto;
+    width: auto;
+    max-width: 640px;
+    border: 0.1rem solid #313f84;
+    margin: 1rem;
+    padding: 1rem;
+    float: right;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: .5rem;
+    font-size: 0.75rem;
+}
+
+li.equation {
+    font-family: monospace;
+    margin: 1rem;
+}
+
+li {
+    margin: 1rem;
+}
+
+pre {
+    border: 0.1rem solid #313f84;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+}
