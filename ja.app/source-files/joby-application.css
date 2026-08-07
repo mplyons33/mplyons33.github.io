@@ -1,0 +1,564 @@
+html {
+    background-color: #005386;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/website-background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+
+/* Header is a 1 row x 2 column grid. Left item is nameplate. Right item is navbar. */
+
+#header {
+    background-color: #005386;
+    color: white;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    border: 0.5rem solid hwb(46 8% 41%);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 90vw;
+    justify-self: center;
+    min-width: 0px;
+    min-height: 0px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 0.1rem;
+    position: sticky;
+    top: 0;
+}
+
+/* NAMEPLATE item styling and layout */
+
+
+.nameplate > * {
+    min-width: 0;
+}
+
+div.nameplate {
+    padding: 0.5rem;
+    font-family: "IBM Plex Serif", 'Times New Roman', Times, serif;
+      text-shadow: 
+        1px 1px 5px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    min-height: 0px;
+    display: grid;
+    grid-template-rows: 1fr 25% 25% 1fr;
+    row-gap: 0.25rem;
+    grid-template-columns: minmax(150px, 1fr) 2fr;
+    place-items: center;
+}
+
+#homelink {
+    color: white;
+    text-decoration: none;
+    border: 0.25rem solid transparent;
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+
+}
+
+#homelink:hover {
+    border: 0.25rem solid white;
+}
+
+img.nameplateimg {
+    max-width: 80%;
+    min-width: 60px;
+    height: auto;
+    border: 0.2rem solid hwb(46 8% 41%);
+    border-radius: 50%;
+    grid-row: 1 / 5;
+    grid-column: 1 / 2;
+}
+
+h1.nameplatetitle {
+    font-size: 1.5rem;
+    padding: 0.1rem;
+    margin: 0rem;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+p.nameplatedesc {
+    font-size: 1rem;
+    padding: 0.1rem;
+    margin: 0.3rem;
+    margin-bottom: 0.1rem;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+
+/* NAVBAR item styling and layout */
+
+div.navbar {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    min-width: 0px;
+}
+
+.navbaritems {
+    color: white;
+    text-shadow: 
+        1px 1px 5px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    font-family: "IBM Plex Serif", 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 0.25rem solid transparent;
+    border-radius: 10px;
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+    width: 100%;
+    height: 100%;
+
+}
+
+.navbaritems:hover {
+    color: white;           
+    background-color: hwb(46 8% 41%);
+    border: 0.25rem solid white;
+    border-radius: 10px;
+}
+
+
+#navbarexperience {
+    grid-column: 1 / 2;
+    
+}
+
+#navbarportfolio {
+    grid-column: 2 / 3;
+}
+
+#navbarcontact {
+    grid-column: 3 / 4;
+}
+
+/* SECTION styling */
+
+div.sectiontitle {
+    background-color: hwb(46 8% 41%);
+    font-family: "IBM Plex Serif", 'Times New Roman', Times, serif;
+      text-shadow: 
+        1px 1px 5px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    padding: 0.5rem;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    margin: 0.25rem;
+    width: 75vw;
+    justify-self: center;
+}
+
+div.sectiontitle > h2 {
+    font-family: "IBM Plex Serif", 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    padding: 0.25rem;
+    color: white;
+    justify-self: center;
+    margin-top: 1.5rem;
+}
+
+div.sectiontitle > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    padding: 0.25rem;
+    color: white;
+    justify-self: center;
+    margin-top: 1.5rem;
+}
+
+/* HERO IMAGES styling */
+
+#hero-image-home {
+    background-image: url("../images/hero-image-yosemite.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 45% 45%;
+    background-attachment: fixed;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 100vw;
+    height: 65vh;
+    margin: 1.5rem;
+    justify-self: center;
+}
+
+#hero-image-experience {
+    background-image: url("../images/hero-image-gasson.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 100vw;
+    height: 65vh;
+    margin: 1.5rem;
+    justify-self: center;
+}
+
+#hero-image-portfolio {
+    background-image: url("../images/hero-image-burns.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 45%;
+    background-attachment: fixed;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 100vw;
+    height: 65vh;
+    margin: 1.5rem;
+    justify-self: center;
+}
+
+#hero-image-contact {
+    background-image: url("../images/hero-image-sunset.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 25%;
+    background-attachment: fixed;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 100vw;
+    height: 65vh;
+    margin: 1.5rem;
+    justify-self: center;
+}
+
+#hero-image-plane-sunset {
+        background-image: url("../images/plane-sunset.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 35%;
+    background-attachment: fixed;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 100vw;
+    height: 65vh;
+    margin: 1.5rem;
+    justify-self: center;
+}
+
+/* BODY CONTENT styling */
+
+
+div.bodycontent {
+    background-color: #005386;
+    color: white;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    padding: 0.5rem;
+    border: 0.5rem solid black;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    width: 70vw;
+    min-height: 25vh;
+    justify-self: center;
+}
+
+#resumeheader {
+    place-items: center;
+}
+
+div.bodycontent > h2, h3 {
+          text-shadow: 
+        1px 1px 5px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+}
+
+div.bodycontent > h2 {
+    font-size: 2rem;
+}
+
+div.bodycontent hr {
+    background-color: hwb(46 8% 41%);
+    border: none;
+    height: 3px;
+    width: 55vw;
+}
+
+.selectionbox {
+    background-color: #10a3ff43;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.selectionbox:hover {
+    background-color: black;
+    border: 5px solid hwb(46 8% 41%);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* HOME PAGE */
+
+#introduction {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 30% 5% 65%;
+    grid-template-rows: 10vh 1fr;
+    grid-template-areas: 
+    'image space heading'
+    'image space text';
+}
+
+#introduction img {
+    height: auto;
+    max-height: 45vh;
+    max-width: 100%;
+    border: 3px solid  hwb(46 8% 41%);
+    justify-self: center;
+}
+
+#introduction p, li {
+    font-family: "IBM Plex Sans";
+}
+
+/* EXPERIENCE PAGE */
+
+div#whatiknow {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    grid-template-rows: 1fr 2fr;
+    row-gap: 2rem;
+    place-items: center;
+    grid-template-areas:
+    'languages languages-content'
+    'software software-content';
+}
+
+#whatiknow img {
+    justify-self: center;
+    min-width: 0;
+    height: auto;
+    transition: box-shadow 0.2s ease;
+}
+
+#whatiknow h3 {
+    font-size: 1.5rem;
+}
+
+#whatiknow img:hover {
+    padding: 6px;
+    border: 5px solid hwb(46 8% 41%);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+#whativedone h3 {
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    width: 59vw;
+    height: 5vh;
+    text-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        3px 8px 24px rgba(0, 20, 60, 0.65);
+    margin-left: 3rem;
+    padding: 1rem;
+}
+
+#whativedone div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 45% 45%;
+    background-attachment: fixed;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    width: 55vw;
+    height: 15vh;
+    margin: 0.5rem;
+    justify-self: center;
+    box-sizing: content-box;
+}
+
+#writing {
+    background-image: url("../images/bookmark-folders-topic.jpg");
+}
+
+#learning {
+    background-image: url("../images/bc-umass.jpg");  
+}
+
+#teaching {
+    background-image: url("../images/democratic-vistas.jpg");
+}
+
+#resume {
+    background-image: url("../images/resume.jpg");
+    background-position: 0% 0%;
+}
+
+
+/* FOOTER styling */
+
+footer {
+    background-color: #005386;
+    color: white;
+    border: 0.5rem solid black;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 8px 24px rgba(0, 20, 60, 0.65);
+    border-radius: 10px;
+    padding: 0.25rem;
+    margin: 0rem;
+    text-align: center;
+}
+
+/* MOBILE LAYOUTS queries */
+
+@media (max-width: 1200px) {
+    #header {
+        grid-template-columns: 1fr;
+        min-width: 0px;
+    }
+
+    #introduction {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "heading"
+        "image"
+        "text";
+    }
+}
+
+@media (max-width: 700px) {
+    #header {
+        grid-template-columns: 1fr;
+        position: static !important;
+        width: 100vw;
+    }
+
+    #introduction > h3 {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+
+    div.nameplate {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: 1fr 1fr 1fr;
+        place-items: center !important;
+    }
+
+    .nameplatetitle {
+        grid-row: 1 / 2;
+    }
+
+    .nameplateimg {
+        grid-row: 2 / 3;
+    }
+
+    .nameplatedesc {
+        grid-row: 3 / 4;
+    }
+
+    .nameplatetitle,
+    .nameplateimg,
+    .nameplatedesc {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        white-space: normal;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    img.nameplateimg {
+        display: block;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        max-width: 60%;
+        height: auto;
+        border: auto;
+        margin: 0.75rem;
+    }
+
+    div.navbar {
+        min-height: 0px;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        place-items: center;
+    }
+
+    .navbaritems {
+        font-size: 1rem;
+        padding: 0.1rem;
+        margin: 0.25rem;
+        width: auto;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        text-align: center;
+        object-fit: cover;
+    }
+
+    div.sectiontitle {
+        width: 100vw;
+    } 
+    
+    .hero-image {
+        max-height: 30vh;
+        background-attachment: fixed;
+    }
+
+    div#whatiknow {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 0.5rem;
+    place-items: center;
+    grid-template-areas:
+    'languages'
+    'languages-content'
+    'software'
+    'software-content';
+}
+
+}
